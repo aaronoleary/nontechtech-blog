@@ -5,6 +5,13 @@ import styled from 'styled-components';
 import { Layout, Article, Wrapper, Button, SectionTitle } from 'components';
 import { media } from '../utils/media';
 
+const Nav = styled.div`
+  position: relative;
+  height: 80px;
+  width: 100%;
+  transition: 0.5s ease;
+
+`;
 const Content = styled.div`
   grid-column: 2;
   box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
@@ -21,6 +28,7 @@ const Content = styled.div`
 
 const Hero = styled.div`
   grid-column: 2;
+  margin-top: 2rem;
   padding: 3rem 2rem 6rem 2rem;
   text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   color: ${props => props.theme.colors.grey.dark};
@@ -44,11 +52,24 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Wrapper>
+      <Nav>
+      <Link to="/About">
+      About
+      </Link>
+      <Link to="/Mentors">
+      Mentors
+      </Link>
+
+      <Link to="/Find a job">
+      Find a Job
+      </Link>
+      </Nav>
       <Hero>
-        <h1>Hi.</h1>
+        <h1>Hey there! 👋</h1>
         <p>
-          I&apos;m John Doe, a Senior UX Developer with five years of industry experience, specializing in developing
-          React apps with the best UX users can get.
+        #techisforeveryone Want to make the 🌍 a better place? Then work in tech. We will help you get in regardless of your background or skills 🚀 No code required!
+
+
         </p>
         <Link to="/contact">
           <Button big>
